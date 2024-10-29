@@ -141,18 +141,22 @@ nav {
     align-items: center;
     border-radius: 10px; /* Bordes redondeados */
     color: white; /* Texto blanco */
+    line-height: 100px;
 }
 
 /* Colores para cada tipo de instrumento */
 .guitar-box {
+    background-color: #b5651d; 
     background-color: var(--guitar-color); /* Color de guitarra */
 }
 
 .piano-box {
+    background-color: #333333; 
     background-color: var(--piano-color); /* Color de piano */
 }
 
 .drum-box {
+    background-color: #8b0000; 
     background-color: var(--drum-color); /* Color de batería */
 }
 
@@ -261,6 +265,10 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor */
     transition: transform 0.3s ease, background-color 0.3s ease; /* Transición suave */
+    line-height: 100px;
+    margin: 10px auto;
+    text-align: center;
+
 }
 
 .caja:hover {
