@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilo para la sección de la variable */
+:root {
+    --guitar-color: blue;
+    --piano-color: black;
+    --drum-color: red;
+}
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: -webkit-linear-gradient(to right, #f7f7f7, #eaeaea); /* Safari y Chrome antiguos */
+    background: -moz-linear-gradient(to right, #f7f7f7, #eaeaea); /* Firefox antiguo */
+    background: linear-gradient(to right, #f7f7f7, #eaeaea); /* Estándar */
+}
+
+/* Encabezado y navegación */
+header {
+    background: #4a90e2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Estándar */
+    -webkit-transition: color 0.3s ease; /* Safari y Chrome antiguos */
+    -moz-transition: color 0.3s ease; /* Firefox antiguo */
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+.instrument-section {
+
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Estándar */
+    -webkit-transition: transform 0.3s ease; /* Safari y Chrome antiguos */
+    -moz-transition: transform 0.3s ease; /* Firefox antiguo */
+    
+    /* Bordes redondeados */
+    -webkit-border-radius: 15px; /* Safari y Chrome antiguos */
+    -moz-border-radius: 15px;    /* Firefox antiguo */
+    border-radius: 15px;         /* Estándar */
+}
+.instrument-section:hover {
+    transform: scale(1.02); /* Efecto de escalado al pasar el ratón */
+    -webkit-transform: scale(1.02); /* Safari y Chrome antiguos */
+    -moz-transform: scale(1.02); /* Firefox antiguo */
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card img {
+    max-width: 200px;
+    margin-right: 20px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container {
+    display: -webkit-flex;   /* Safari y Chrome antiguos */
+    display: -moz-flex;      /* Firefox antiguo */
+    display: -ms-flexbox;    /* IE 10 */
+    display: flex;           /* Estándar */
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.flex-item {
+    background-color: lightcoral;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;  /* Permite que todos los elementos flexibles tengan la misma proporción */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center;
+    -webkit-transition: background-color 0.3s ease;  /* Safari y Chrome antiguo */
+    -moz-transition: background-color 0.3s ease;     /* Firefox antiguo */
+    -o-transition: background-color 0.3s ease;       /* Opera antiguo */
+    transition: background-color 0.3s ease;          /* Estándar */
+}
+
+.flex-item:hover {
+    background-color: lightblue; /* Cambio de color al pasar el ratón */
+}
+
+
+
+/* Flexbox para navegación */
+nav {
+    display: -webkit-flex;   /* Safari y Chrome antiguos */
+    display: -moz-flex;      /* Firefox antiguo */
+    display: -ms-flexbox;    /* IE 10 */
+    display: flex;           /* Estándar */
+    justify-content: center; /* Centra el contenido del nav */
+}
+
+
+
+
+.variable-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.variable-box {
+    width: 200px;
+    height: 100px;
+    margin: 10px auto; /* Centrar la caja */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Bordes redondeados */
+    color: white; /* Texto blanco */
+}
+
+/* Colores para cada tipo de instrumento */
+.guitar-box {
+    background-color: var(--guitar-color); /* Color de guitarra */
+}
+
+.piano-box {
+    background-color: var(--piano-color); /* Color de piano */
+}
+
+.drum-box {
+    background-color: var(--drum-color); /* Color de batería */
+}
+
+
+
+/*botón*/
+.btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto; /* Centra el botón */
+    padding: 10px;
+    background-color: rgb(41, 113, 137);
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    color: white;
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer;
+    /* Transición suave */
+    -webkit-transition: background-color 0.3s ease;  /* Safari y Chrome antiguos */
+    -moz-transition: background-color 0.3s ease;     /* Firefox antiguo */
+    -o-transition: background-color 0.3s ease;       /* Opera antiguo */
+    transition: background-color 0.3s ease;          /* Estándar */
+}
+
+.btn:hover {
+    background-color: rgb(39, 127, 39); /* Color de fondo al pasar el ratón */
+}
+
+
+/* Footer */
+footer {
+    background: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .card {
+        flex-direction: column; /* Coloca la imagen sobre el texto en móviles */
+        align-items: flex-start;
+    }
+
+    .card img {
+        margin: 0 0 10px 0; /* Ajusta el margen de la imagen */
+    }
+}
+
+/* Estilos para el gradiente */
+.gradient-box {
+    width: 100%; /* Ancho completo para ocupar el contenedor */
+    padding: 20px; /* Espaciado interno */
+    /* Fallback de color sólido */
+    background-color: blue;
+    /* Gradiente para navegadores compatibles */
+    background-image: -webkit-linear-gradient(to right, blue, green); /* Safari y Chrome antiguos */
+    background-image: -moz-linear-gradient(to right, blue, green);    /* Firefox antiguo */
+    background-image: -o-linear-gradient(to right, blue, green);      /* Opera antiguo */
+    background-image: linear-gradient(to right, blue, green);         /* Estándar */
+}
+
+.contenedor{
+    width: 100%;
+    padding: 20px;
+    background-color: lightgray;
+}
+@media (min-width: 600px) {
+    .contenedor{
+        background-color: rgb(225, 173, 230);
+    }
+}
+@media (min-width: 900px) {
+    .contenedor{
+        background-color: rgb(230, 238, 144);
+    }
+}
+
+
+/* Estilos para la sección adicional de instrumentos */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;           /* Permitir ajuste en varias líneas */
+    padding: 20px;
+    background-color: #f3f3f3; /* Fondo suave para la sección */
+}
+
+.caja {
+    width: 120px;
+    height: 120px;
+    background-color: coral;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transición suave */
+}
+
+.caja:hover {
+    background-color: #ff7f50; /* Color más intenso al pasar el mouse */
+    transform: scale(1.1);     /* Ampliación suave al pasar el mouse */
+}
